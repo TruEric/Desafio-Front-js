@@ -15,6 +15,44 @@
 
 
 <body>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+                integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+    </script>
+
+    <div class="modal modalCreatePost" id="modalCreatePost" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" id="btn-close-modal" class="btn btn-primary " data-toggle="modal" data-target="#preview">
+                    Preview
+                </button>
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="New post title here..." id="title" name="title">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Add up to 4 tags..."
+                      id="tags" name="tags">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="URL image"
+                        id="pic" name="pic">
+                      </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Write your post content here ... " id="exampleFormControlTextarea1" rows="3" name="text-content"></textarea>
+                      </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-save-post">Publish</button>
+                        <button type="button" class="btn btn-primary">Save draft</button>
+                    </div>
+                  </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    
     <!--Nav Airy-->
     <header class="container-fluid sticky-top bg-white border-bottom border-dark">
         <div class="container container-fit">
@@ -26,7 +64,7 @@
                             <form action=""><input type="text" placeholder="Search..."></form>
                         </div>
                         <div class="nav-wrapper">
-                            <button type="button" class="btn d-none d-md-block btn-primary">Write a post
+                            <button type="button" class="btn d-none d-md-block btn-primary"data-toggle="modal" data-target="#modalCreatePost">Write a post
                             </button>
                             <span><img src="assets/svgs_collection (1)/svg6.svg" alt=""></span>
                             <span><img src="assets/svgs_collection (1)/svg7.svg" alt=""></span>
@@ -116,6 +154,7 @@
             </ul>
         </div>
     </div>
+    
     <div class="card mb-lg-3 mb-md-0 mb-sm-0">
         <span class="card-img-container"><img src="https://picsum.photos/id/0/600/300"
                 class="card-img-top" alt="..."></span>
@@ -156,6 +195,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container-posts">
+        
     </div>
     <!-- card sin foto -->
     <div class="card mb-lg-3 mb-md-0 mb-sm-0">
@@ -405,14 +447,15 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"
-                integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
                 integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
                 crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
                 integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
                 crossorigin="anonymous"></script>
+
+            <script src="js/main.js"></script>
 </body>
 
 </html>
