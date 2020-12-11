@@ -1,0 +1,117 @@
+header {
+  .container-fit {
+    max-width: 1280px;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .nav-wrapper-left {
+      display: flex;
+      flex-direction: row;
+      span {
+        width: 50px;
+        height: 40px;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.7;
+        }
+      }
+      input {
+        border: 0.7px solid rgba(153, 163, 173, 0.9);
+        border-radius: 4px;
+        width: 420px;
+        height: 40px;
+        padding: 0px 10px;
+        margin-left: 16px;
+      }
+    }
+    .btn-primary {
+      background-color: #3b49df;
+      color: white;
+      font-weight: bolder;
+      &:hover {
+        background-color: #323ebe;
+        cursor: pointer;
+      }
+    }
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 329px;
+      height: 56px;
+      //background-color: red;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //background-color: green;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        opacity: 0.7;
+        padding: 8px;
+        margin: 0px 4px;
+        &:hover {
+          text-decoration: none;
+          background-color: rgba(0, 0, 0, 0.035);
+          cursor: pointer;
+          color: #08090a;
+          opacity: 0.9;
+        }
+        span {
+          fill: currentColor;
+        }
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+        img {
+          width: 32px;
+          height: 32px;
+        }
+    }
+  }
+}
+
+/* Aside derecho */
+
+.asideAiry {
+  .card {
+    background-color: #f9fafa;
+
+    .card-body {
+      p {
+        strong {
+          font-size: 17px;
+        }
+      }
+      .badge-secondary {
+        background-color: #445ede;
+      }
+    }
+
+    .card-articles {
+      :hover {
+        background-color: white;
+        color: #445ede;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  header {
+    div {
+      nav {
+        .form-control {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
