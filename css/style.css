@@ -1,5 +1,6 @@
 * {
   font-family: "Poppins", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .fondo {
@@ -9,6 +10,7 @@
 
 .containerLeft {
   background-color: #eef0f1;
+  margin-bottom: 24px;
 }
 
 .aside-list a {
@@ -19,7 +21,9 @@
   width: 100%;
   height: 40px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
+  color: #202428;
+  opacity: .8;
 }
 
 .aside-list a:hover {
@@ -227,10 +231,6 @@ a:active a:hover {
   .card-header ul li:hover {
     cursor: pointer;
     background: #3b49df1a;
-  }
-  .card-header ul li:hover:active {
-    -webkit-box-shadow: 0 4px 1px -2px #414ada;
-            box-shadow: 0 4px 1px -2px #414ada;
   }
   .card-header ul li span {
     color: #363d44;
@@ -508,10 +508,6 @@ a:active a:hover {
     cursor: pointer;
     background: #3b49df1a;
   }
-  .card-header ul li:hover:active {
-    -webkit-box-shadow: 0 4px 1px -2px #414ada;
-            box-shadow: 0 4px 1px -2px #414ada;
-  }
   .card-header ul li span {
     color: #363d44;
     font-weight: 900;
@@ -753,7 +749,7 @@ a:active a:hover {
   .container-fit {
     max-width: 1280px;
     margin: auto;
-    padding: 0px 16px;
+    padding: 0px 36px;
   }
   .card-header {
     display: -webkit-box;
@@ -773,13 +769,15 @@ a:active a:hover {
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
     padding: 1rem 0rem;
   }
   .card-header ul {
     background-color: #eef0f1;
   }
   .card-header ul li {
+    height: 40px;
+    border-radius: 6px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -787,16 +785,12 @@ a:active a:hover {
         -ms-flex-align: center;
             align-items: center;
     margin: 0rem 0.25rem;
-    padding: 0.25rem;
+    padding: 6px;
   }
   .card-header ul li:hover {
     cursor: pointer;
-    background: #3b49df1a;
-  }
-  .card-header ul li:hover:active {
-    -webkit-box-shadow: 0 4px 1px -2px #414ada;
-            box-shadow: 0 4px 1px -2px #414ada;
-    display: block;
+    background: #dde0ef;
+    color: #3b49df;
   }
   .card-header ul li span {
     color: #363d44;
@@ -824,6 +818,7 @@ a:active a:hover {
   }
   .card-img-container {
     width: 100%;
+    height: 273px;
     overflow: hidden;
   }
   .card-img-container .card-img-top {
@@ -875,7 +870,7 @@ a:active a:hover {
     font-weight: bolder;
     margin: 0px;
     font-size: 0.875rem;
-    font-weight: 900;
+    font-weight: 500;
     color: #4d5760;
   }
   .footer-card-central p:hover {
@@ -1087,7 +1082,7 @@ header nav .nav-wrapper-left input {
 header nav .btn-primary {
   background-color: #3b49df;
   color: white;
-  font-weight: bolder;
+  font-weight: 400;
 }
 
 header nav .btn-primary:hover {
@@ -1102,9 +1097,7 @@ header nav .nav-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 329px;
+  width: 315px;
   height: 56px;
 }
 
@@ -1151,6 +1144,91 @@ header nav .nav-wrapper img {
 /* Aside derecho */
 .asideAiry .card {
   background-color: #f9fafa;
+}
+
+.asideAiry .card .img-podcast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.asideAiry .card .img-podcast img {
+  width: 115px;
+  height: 115px;
+  border-radius: 6px;
+}
+
+.asideAiry .card .img-podcast img:hover {
+  cursor: pointer;
+}
+
+.asideAiry .card .img-podcast .podcast {
+  padding: 0px 12px;
+}
+
+.asideAiry .card .img-podcast .podcast h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0px;
+}
+
+.asideAiry .card .img-podcast .podcast p {
+  font-size: 12px;
+  line-height: 24px;
+  margin: 0px;
+}
+
+.asideAiry .card .podcast-footer {
+  margin: 0px;
+  font-size: 12px;
+  line-height: 19.2px;
+  font-weight: 700;
+  color: #3b49df;
+}
+
+.asideAiry .card .podcast-footer:hover {
+  cursor: pointer;
+}
+
+.asideAiry .card .title-aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.asideAiry .card .title-aside h3 {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #202428;
+}
+
+.asideAiry .card .title-aside p {
+  font-size: 14px;
+  margin: 0;
+  color: #3b49df;
+}
+
+.asideAiry .card .title-aside p:hover {
+  cursor: pointer;
 }
 
 .asideAiry .card .card-body p strong {

@@ -26,9 +26,6 @@
         &:hover {
           cursor: pointer;
           background: #3b49df1a;
-          &:active {
-            box-shadow: 0 4px 1px -2px rgba(65, 74, 218, 1);
-          }
         }
         span {
           color: #363d44;
@@ -265,9 +262,6 @@
         &:hover {
           cursor: pointer;
           background: #3b49df1a;
-          &:active {
-            box-shadow: 0 4px 1px -2px rgba(65, 74, 218, 1);
-          }
         }
         span {
           color: #363d44;
@@ -483,8 +477,7 @@
   .container-fit {
     max-width: 1280px;
     margin: auto;
-    padding: 0px 16px;
-    
+    padding: 0px 36px;
   }
   .card-header {
     display: flex;
@@ -492,28 +485,27 @@
     align-items: center;
     margin-bottom: 0;
     padding: 0rem 0rem 0.5rem;
-    background-color: #eef0f1!important;
+    background-color: #eef0f1 !important;
     h2 {
       font-family: "Roboto", sans-serif;
       font-size: 1.25rem;
       font-weight: bold;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0;
       padding: 1rem 0rem;
     }
     ul {
       background-color: #eef0f1;
       li {
+        height: 40px;
+        border-radius: 6px;
         display: flex;
         align-items: center;
         margin: 0rem 0.25rem;
-        padding: 0.25rem;
+        padding: 6px;
         &:hover {
           cursor: pointer;
-          background: #3b49df1a;
-          &:active {
-            box-shadow: 0 4px 1px -2px rgba(65, 74, 218, 1);
-            display: block;
-          }
+          background: rgba(221, 224, 239, 1);
+          color: #3b49df;
         }
         span {
           color: #363d44;
@@ -544,6 +536,7 @@
   }
   .card-img-container {
     width: 100%;
+    height: 273px;
     overflow: hidden;
     .card-img-top {
       height: auto;
@@ -582,7 +575,7 @@
       font-weight: bolder;
       margin: 0px;
       font-size: 0.875rem;
-      font-weight: 900;
+      font-weight: 500;
       color: #4d5760;
       &:hover {
         cursor: pointer;
