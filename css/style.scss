@@ -3,11 +3,26 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.fondo{
-  background-color: #eef0f1;
-  padding: 16px;
+@media screen and (min-width: 375px) {
+  .fondo{
+    background-color: #eef0f1;
+    padding: 0px;
+  }
 }
 
+@media screen and (min-width: 768px) {
+  .fondo{
+    background-color: #eef0f1;
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .fondo{
+    background-color: #eef0f1;
+    padding: 16px;
+  }
+}
 
 @import "leftAside";
 @import 'main';
