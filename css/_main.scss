@@ -3,12 +3,22 @@
 }
 @media screen and (min-width: 375px) {
   .card-header {
+    .dropdown-item{
+      &:hover{
+        cursor: pointer;
+        background-color: #3b49df;
+      }
+    }
+    .nav{
+      display: none;
+    }
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: transparent;
     margin-bottom: 0;
     padding: 0rem 0rem 0.5rem;
+    background-color: #eef0f1 !important;
     h2 {
       font-family: "Roboto", sans-serif;
       font-size: 1.25rem;
@@ -67,7 +77,7 @@
   .card-body {
     flex: 1 1 auto;
     min-height: 1px;
-    padding: 1rem;
+    padding: 8px;
     &:hover {
       cursor: pointer;
     }
@@ -94,7 +104,7 @@
       font-weight: bolder;
       margin: 0px;
       font-size: 0.875rem;
-      font-weight: 900;
+      font-weight: 700;
       color: #4d5760;
       &:hover {
         cursor: pointer;
@@ -116,8 +126,8 @@
   }
   .card-title {
     font-family: "Roboto", sans-serif;
-    padding-left: 2.3rem;
-    font-size: 1.875rem;
+    //padding-left: 2.3rem;
+    font-size: 1.25rem;
     line-height: 1.25;
     font-weight: 700;
     color: #08090a;
@@ -137,7 +147,7 @@
     font-family: "Roboto", sans-serif;
     font-size: 0.875rem;
     color: #08090a;
-    padding-left: 2.3rem;
+    //padding-left: 2.3rem;
     margin-bottom: 0.5rem;
     .discuss {
       background-color: black;
@@ -190,7 +200,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-left: 2.3rem;
+    //padding-left: 2.3rem;
     font-size: 0.875rem;
     a {
       padding: 4px 12px 4px 0px;
@@ -239,12 +249,16 @@
 
 @media screen and (min-width: 768px) {
   .card-header {
+    .nav{
+      display: flex;
+    }
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: transparent;
     margin-bottom: 0;
     padding: 0rem 0rem 0.5rem;
+    background-color: #eef0f1 !important;
     h2 {
       font-family: "Roboto", sans-serif;
       font-size: 1.25rem;
@@ -486,6 +500,9 @@
     margin-bottom: 0;
     padding: 0rem 0rem 0.5rem;
     background-color: #eef0f1 !important;
+    .nav{
+      display: flex;
+    }
     h2 {
       font-family: "Roboto", sans-serif;
       font-size: 1.25rem;
