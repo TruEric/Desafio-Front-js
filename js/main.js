@@ -7,8 +7,8 @@ const printPosts = posts => {
         console.log("object ", posts[key])
         let {title, tags} = posts[key]
         let entryHTML = `
-        <div class="card mb-lg-3 mb-md-0 mb-sm-0">
-            <div class="card-body">
+        <div class="card mb-lg-3 mb-md-0 mb-sm-0 " >
+            <div class="card-body print-card" data-toggle="modal" data-target="#modal-card">
                 <div class="footer-card-central">
                     <img src="assets/images/profile-2.jpg" alt="" class="author-profile">
                     <div class="footer-firm">
@@ -94,3 +94,40 @@ const savePost = post => {
 }
 
 getPosts()
+
+//search
+
+$("#entry").keypress(event=> {
+    if(event.witch == 13){
+        const entry = document.querySelector("#entry")
+        const search = document.querySelector("#search")
+        const result = document.querySelector("#result")
+        const filterSearch = posts => {
+            $(".card-header").empty()
+            const text = entry.value.toLowerCase()
+
+            
+
+            for (const key in object) {
+                let {title} = posts[key]
+                console.log(title)
+                
+            }
+
+                for(
+                let product of products
+                ) {
+                let nombre = product.nombre.toLowerCase()
+                if (nombre.indexOf(text) !== -1){
+                result.innerHTML += `<li>${product.nombre} - Valor: ${product.valor}</li>`
+                }
+                }
+                if (result.innerHTML === ""){
+                result.innerHTML += `<li>no existe</li>`
+                }
+        }
+        search.addEventListener("click", filterSearch)
+    }
+})
+
+    

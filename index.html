@@ -20,13 +20,20 @@
                 integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
     </script>
 
+    <div class="modal" id="modal-card" tabindex="-1">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+            </div>
+        </div>
+        </div>
+    </div>
+
     <div class="modal modalCreatePost" id="modalCreatePost" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-body">
-                <button type="button" id="btn-close-modal" class="btn btn-primary " data-toggle="modal" data-target="#preview">
-                    Preview
-                </button>
                 <form>
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="New post title here..." id="title" name="title">
@@ -45,7 +52,6 @@
                     
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary btn-save-post">Publish</button>
-                        <button type="button" class="btn btn-primary">Save draft</button>
                     </div>
                   </form>
             </div>
@@ -62,7 +68,7 @@
                         <div class="nav-wrapper-left">
                             <span class="d-md-none d-block d-lg-none burger"><img src="assets/svgs_collection (1)/svg0.svg" alt=""></span>
                             <span><img src="assets/svgs_collection (1)/svg1.svg" alt=""></span>
-                            <form action=""><input type="text" placeholder="Search..."></form>
+                            <form action=""><input type="text" id="entry" placeholder="Search..."></form>
                         </div>
                         <div class="nav-wrapper">
                             <button type="button" class="btn d-none d-md-block btn-primary"data-toggle="modal" data-target="#modalCreatePost">Write a post
