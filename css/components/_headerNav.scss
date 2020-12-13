@@ -58,6 +58,28 @@
         //width: 30px;
         height: 56px;
         //background-color: red;
+        .search-button{
+          width: 40px;
+          height: 40px;
+          padding: 0;
+          border-radius: 20px;
+          border: none;
+          background-color: white;
+          outline: none;
+          margin: 0px 4px;
+          &:hover {
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.035);
+            cursor: pointer;
+            color: #08090a;
+            opacity: 0.9;
+          }
+          img{
+            width: 24px;
+            height: 24px;
+            opacity: .7;
+          }
+        }
         span {
           display: flex;
           align-items: center;

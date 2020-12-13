@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>DEV Community 👩‍💻👨‍💻</title>
 </head>
 
 
@@ -33,31 +33,145 @@
     <div class="modal modalCreatePost" id="modalCreatePost" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="New post title here..." id="title" name="title">
+            <div class="modal-body modal-style">
+                <form class="form-group mb-0">
+                    <div class="modal-header p-1">
+                        <div class="modal-title">
+                            <span>
+                                <img src="assets/svgs_collection (1)/svg1.svg" alt="">
+                            </span>
+                            <p>Write a new post</p>
+                        </div>
+                        <div class="edit-post"><p>Edit</p><button type="button" data-toggle="modal" data-target="#previewModal">Preview</button></div>
                     </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Add up to 4 tags..."
+                    <div class="form-item">
+                        <input type="text" placeholder="Add a cover image"
+                        id="cover" name="pic">
+                      </div>
+                    <div class="form-item">
+                      <input type="text" placeholder="New post title here..." id="title" name="title">
+                    </div>
+                    <div class="form-item">
+                      <input type="text" placeholder="Add up to 4 tags..."
                       id="tags" name="tags">
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="URL image"
+                    <div class="form-item">
+                        <input type="text" placeholder="URL image"
                         id="pic" name="pic">
                       </div>
-                    <div class="form-group">
+                    <div class="form-item input-group-lg">
                         <textarea class="form-control" placeholder="Write your post content here ... " id="exampleFormControlTextarea1" rows="3" name="text-content"></textarea>
                       </div>
-                    
-                    <div class="modal-footer">
+                    <div class="modal-submit">
                         <button type="button" class="btn btn-primary btn-save-post">Publish</button>
+                        <button type="button" class="btn btn-secondary text-dark border-0">Save draft</button>
+                        <span><img src="assets/svgs_collection (1)/svg35.svg" alt=""></span>
+                        <p>Revert new changes</p>
                     </div>
                   </form>
             </div>
           </div>
         </div>
     </div>
+    <!-- Modal preview-->
+    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="previewModalLabel">Preview</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </butto>
+            </div>
+            <div class="modal-body">
+                <span class="card-img-container"><img src="https://picsum.photos/id/0/600/300"
+                class="card-img-top" alt="..."></span>
+                <div class="card-body">
+                <div class="footer-card-central">
+                    <img src="assets/images/profile-1.jpg" alt="" class="author-profile">
+                    <div class="footer-firm">
+                        <p class="card-text">Kishore Kumar</p>
+                        <a class="card-text">Nov 7 (2 hours ago)</a>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h2>So You Want To Code?</h2>
+                </div>
+                <div class="card-text-article">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, esse quo, aperiam libero, illo dolores praesentium quibusdam iste soluta deserunt natus quia aspernatur fugiat consectetur amet. Eius molestias debitis deserunt.
+                </div>
+                <div class="tag-link p-0">
+                    <a><span>#</span>webdev</a>
+                    <a><span>#</span>algorithms</a>
+                    <a><span>#</span>javascript</a>
+                </div>
+                <div class="reactions p-0">
+                        <div class="comments">
+                            <a href=""><span><svg class="crayons-icon" width="24" height="24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                </path>
+                            </svg></span>0</a>
+                            <a href=""><span><svg class="crayons-icon" width="24" height="24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                                </path>
+                            </svg></span>0</a>
+                        </div>
+                        <div class="time-read">
+                            <p>2 min read</p>
+                            <button class="btn-read-save">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal search-->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content modal-color">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body-search">
+                <input type="text" id="entry" placeholder="Search...">
+            </div>
+            <div class="time-results">
+                <h3>Search results</h3>
+                <div class="relevance">
+                    <p>Most Relevant</p>
+                    <p>Newest</p>
+                    <p>Oldest</p>
+                </div>
+                <div class="relevance-list">
+                    <ul>
+                        <li>
+                            <p>Posts</p>
+                        </li>
+                        <li>
+                            <p>Podcasts</p>
+                        </li>
+                        <li>
+                            <p>People</p>
+                        </li>
+                        <li>
+                            <p>Comments</p>
+                        </li>
+                        <li>
+                            <p>My post only</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
     <!--Nav Airy-->
     <header class="container-fluid sticky-top bg-white border-bottom border-dark">
@@ -68,12 +182,12 @@
                         <div class="nav-wrapper-left">
                             <span class="d-md-none d-block d-lg-none burger"><img src="assets/svgs_collection (1)/svg0.svg" alt=""></span>
                             <span><img src="assets/svgs_collection (1)/svg1.svg" alt=""></span>
-                            <form action=""><input type="text" id="entry" placeholder="Search..."></form>
+                            <input type="text" id="entry" placeholder="Search...">
                         </div>
                         <div class="nav-wrapper">
                             <button type="button" class="btn d-none d-md-block btn-primary"data-toggle="modal" data-target="#modalCreatePost">Write a post
                             </button>
-                            <span class="d-md-none d-block d-lg-none"><img src="assets/svgs_collection (1)/svg5.svg" alt=""></span>
+                            <button button type="button"  class="d-md-none d-block d-lg-none search-button" data-toggle="modal" data-target="#searchModal"><img src="assets/svgs_collection (1)/svg5.svg" alt=""></button>
                             <span class="d-md-none d-none d-lg-block"><img src="assets/svgs_collection (1)/svg6.svg" alt=""></span>
                             <span><img src="assets/svgs_collection (1)/svg7.svg" alt=""></span>
                             <span><img src="assets/svgs_collection (1)/svg8.svg" alt=""></span>
@@ -463,10 +577,6 @@
 
         </div>
     </div>
-
-
-
-
 
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
                 integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
