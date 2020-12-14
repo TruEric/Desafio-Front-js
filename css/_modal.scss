@@ -1,0 +1,131 @@
+.modal-style {
+  background-color: #eef0f1;
+  .modal-header {
+    background-color: #eef0f1;
+    margin-bottom: 4px;
+    border: none;
+    .modal-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      span {
+        width: 50px;
+        height: 40px;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.7;
+        }
+      }
+      p {
+        margin-bottom: 0;
+        margin-left: 20px;
+      }
+    }
+    .edit-post {
+      display: flex;
+      flex-direction: row;
+      p {
+        background-color: #eef0f1;
+        padding: 0.5rem;
+        border-radius: 6px;
+        margin: 0px 4px;
+        &:hover {
+          color: #3b49df;
+          background: #3b49df1a;
+        }
+      }
+      button {
+        border: 0;
+        background-color: #eef0f1;
+        padding: 0.5rem;
+        border-radius: 6px;
+        margin: 0px 4px;
+        color: #212529;
+        &:hover {
+          color: #3b49df;
+          background: #3b49df1a;
+        }
+      }
+    }
+  }
+}
+.form-item {
+  margin: 0;
+  input {
+    border: none;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.modal-submit {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0rem;
+  .btn-primary {
+    background-color: #3b49df;
+    color: white;
+    font-weight: 400;
+    border: none;
+    margin-right: 6px;
+    &:hover {
+      background-color: #323ebe;
+      cursor: pointer;
+    }
+  }
+  .btn-secondary {
+    background-color: #b5bdc4;
+    font-weight: 400;
+    &:hover {
+      background-color: #a4acb3;
+      cursor: pointer;
+      color: #212529;
+    }
+  }
+  span{
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 6px;
+      &:hover {
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.035);
+        cursor: pointer;
+        color: #08090a;
+        opacity: 0.9;
+      }
+      img{
+          width: 24px;
+          height: 24px;
+      }
+  }
+  p{
+      height: 40px;
+      margin-bottom: 0;
+      padding: 8px;
+      border-radius: 6px;
+      &:hover {
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.035);
+        cursor: pointer;
+        color: #08090a;
+        opacity: 0.9;
+      }
+  }
+}
