@@ -203,3 +203,5 @@ $(document).on('keyup','#entry',event=> {
 //fechas 
 
 let date = new Date ()
+
+//erick
