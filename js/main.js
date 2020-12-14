@@ -1,14 +1,15 @@
 /* https://desafio-front-default-rtdb.firebaseio.com/ */
 
+
 const printPosts = posts => {
     $(".container-posts").empty()
     for ( key in posts) {
-        console.log("key", key)
-        console.log("object ", posts[key])
+        /* console.log("key", key)
+        console.log("object ", posts[key]) */
         let {title, tags} = posts[key]
         let entryHTML = `
-        <div class="card mb-lg-3 mb-md-0 mb-sm-0 " >
-            <div class="card-body print-card" data-toggle="modal" data-target="#modal-card">
+        <div class="card mb-lg-3 mb-md-0 mb-sm-0 "data-entry-key=${key} >
+            <div class="card-body print-card" >
                 <div class="footer-card-central">
                     <img src="assets/images/profile-2.jpg" alt="" class="author-profile">
                     <div class="footer-firm">
@@ -16,7 +17,7 @@ const printPosts = posts => {
                         <a class="card-text">Nov 9 (5 hours ago)</a>
                     </div>
                 </div>
-                <div class="card-title">
+                <div class="card-title print-card" onclick="saveKeyModal('${key}')" data-toggle="modal" data-target="#modal-card">
                     <h2>${title}</h2>
                 </div>
                 <div class="tag-link">
@@ -39,8 +40,9 @@ const printPosts = posts => {
                     </div>
                     <div class="time-read">
                         <p>2 min read</p>
-                        <button class="btn-read-save">Save</button>
+                        <button class="btn-read-save button-save" onclick="saveKey('${key}')" type="button" data-entry-key=${key}>Save</button>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -48,13 +50,55 @@ const printPosts = posts => {
         $(".container-posts").append(entryHTML)
     }
 }
+/* $(document).click(event => {
+    console.log(event.target)
+}) */
+let selectedPost= {}
+let saveKey = key => {
+    console.log("hola")
+    console.log(key)
+    selectedPost[key] = allPosts[key]
+}
 
+$(".reading-list").click(event => {
+    event.preventDefault()
+    console.log("hola")
+    $(".container-posts").empty()
+    printPosts(selectedPost)
+})
+
+let saveKeyModal = key => {
+    console.log("hola desde title")
+    selectedPost[key] = allPosts[key]
+    console.log(selectedPost)
+}
+
+
+$(".print-card").click(()=> {
+$(".modal-body").empty()
+    
+})
+
+
+
+/* $(".btn-read-save").click(event => {
+    console.log("hola")
+    let entryKey = $(event.target).closest(".card").data("entry-key")
+    console.log( data("entry-key"))
+    console.log( entryKey )
+    let selectedPost = postsCollection[entryKey]
+    console.log( selectedPost )
+    
+}) */
+
+let allPosts= {}
 const getPosts = () => {
     $.ajax({
         url: "https://desafio-front-default-rtdb.firebaseio.com/.json",
         method: "GET",
         success: response => {
-            console.log( response )
+            /* printPosts(response) */
+            allPosts = response
             printPosts(response)
             
         },
@@ -85,7 +129,6 @@ const savePost = post => {
             console.log( response )
             getPosts()
             $("#modalCreatePost").modal("hide")
-            
         },
         error: error => {
             console.log( error )
@@ -93,15 +136,42 @@ const savePost = post => {
     });
 }
 
-getPosts()
+
+getPosts()/* 
+filterSearch(getPosts()) */
 
 //search
+let searchResultObject = {}
+$(document).on('keyup','#entry',event=> {
+    /* $(".print-search").empty() */
+    searchResultObject= {}
+    
+    /* console.log(allPosts) */
+    let search = $("#entry").val()
+    for (key in allPosts) {
+        
+        let {title} = allPosts[key]
+        /* console.log(title)
+        console.log(allPosts[key]) */
+        /* console.log(allPosts) */
+        //let post = allPosts[key]
+        /* let result = title.includes(search) */
+        if(title.toLowerCase().includes(search.toLowerCase())) {
+            searchResultObject[key] = allPosts[key]
+            //searchResultObject = {...searchResultObject, post}
+            printPosts(searchResultObject)
+        }
 
-$("#entry").keypress(event=> {
-    if(event.witch == 13){
+
+    }
+    /* if(event.witch){
+        console.log("entro la condicional")
+        event.preventDefault()
         const entry = document.querySelector("#entry")
         const search = document.querySelector("#search")
         const result = document.querySelector("#result")
+        
+        console.log("allPosts",allPosts)
         const filterSearch = posts => {
             $(".card-header").empty()
             const text = entry.value.toLowerCase()
@@ -127,7 +197,9 @@ $("#entry").keypress(event=> {
                 }
         }
         search.addEventListener("click", filterSearch)
-    }
+    } */
 })
 
-    
+//fechas 
+
+let date = new Date ()
